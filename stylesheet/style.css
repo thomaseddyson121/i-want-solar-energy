@@ -51,6 +51,11 @@ footer {
     color: #E1DDDB;
 }
 
+video {
+    pointer-events: none;
+    width: 100%;
+}
+
 main, .home-product{
     display: grid;    
     grid-template-rows: auto;
