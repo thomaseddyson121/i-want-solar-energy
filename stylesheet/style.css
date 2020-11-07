@@ -101,8 +101,6 @@ main, .home-product{
     display: grid;
 }
 
-
-
 .hsw-article1 { grid-area: 1/2/3/2;background: lightgray; }
 .hsw-article2 { grid-area: 1/1/1/1; background: gray; }
 .hsw-article3 { grid-area: 1/3/2/3; background: lightgray; }
@@ -115,6 +113,10 @@ main, .home-product{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#hsw-articles * {
+    padding: 10px;
 }
 
 .hsw-prodcut1 { grid-area: 1/1;}
