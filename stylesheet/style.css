@@ -6,10 +6,12 @@ Cyan: #ABDFF1
 Blue-gray: #A3B4C8
 */
 
+
 body{
     background: #A3B4C8;
     padding: 0;
     margin: 0;
+    font-family:  "Arial", "Helvetica", "sans-serif";
 }
 
 #logo {
@@ -33,70 +35,61 @@ footer {
     color: #FFF;    
 }
 
-.nav-bar{
-    background: #0C4A60;
-    display: flex;    
-    align-items: center;
-} 
-
-.nav-bar li {    
-    background: #EF6C33;
-    list-style-type: none;
-    margin: 0px 10px;
-    padding: 10px;
-}
-
-.nav-bar a {
-    text-decoration: none;
-    color: #E1DDDB;
-}
-
 video {
     pointer-events: none;
     width: 100%;
 }
 
-.navigation { grid-area: nav; }
-#index-products { grid-area: products; }
-#index-video { grid-area: video; }
-#index-aside { grid-area: aside; }
-#index-footer { grid-area: footer; }
-
-#index-content {
-    display: grid;
-    grid-template-areas:
-    'nav nav nav nav'
-    'video video video video'
-    'products products products aside'    
-    'footer footer footer  footer';
+#index-video {
+    width: 100%;
 }
 
-#index-content > section, nav {
-    background: #ffffff;
+.site-welome-message { 
+    grid-area: head;
+}
+.nav-bar { 
+    grid-area: nav;
 }
 
-.product-img , .hsw-product-img{
+#index-article {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+#index-aside {
+    width: 30%;
+    float: left;
+}
+
+#index-main footer {
+    float: left;
+    width: 100%;
+}
+  
+.product-img {
     max-width: 10em;
     height: auto;
 }
-
-.home-product h2 { grid-area: head; }
-.home-product p { grid-area: desciption; }
-.home-product img { grid-area: img; }
-
-
+  
 .home-product {
-    display: grid;
-    grid-template-areas:
-    'head head head'
-    'desciption desciption img';
-    grid-gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    border: solid;
+}
+  
+.home-product p {
+    width: 50%;
+    word-spacing: 2px;
 }
 
 #hsw-articles { grid-area: articles; }
 #hsw-aside { grid-area: aside; }
-
+.site-welcome-message { grid-area: message; }
+footer { grid-area: footer; }
 
 #hsw-content > section {
     background: #ffffff;
@@ -105,10 +98,11 @@ video {
 #hsw-content {
     display: grid;
     grid-template-areas:
-    'nav nav nav nav'
-    'articles articles articles articles'
-    'aside aside aside aside'
-    'footer footer footer footer';    
+    'message message message'
+    'nav nav nav'
+    'articles articles articles'
+    'aside aside aside'
+    'footer footer footer';    
 }
 
 .hsw-article1 { grid-area: article1; background: lightgray; }
@@ -130,11 +124,13 @@ video {
 
 #hsw-articles > article {
     padding: 10px;
+    border: solid;
+    border-color: #A3B4C8;
 }
 
 #EUsolar-article {
     border: ridge;
-    padding: 10px;
+    padding: 20px;
 }
 
 #EUsolar-article { grid-area: article;}
@@ -144,6 +140,7 @@ video {
 #EUsolar-content {
     display: grid;
     grid-template-areas:
+    'head head head'
     'nav nav nav'
     'article article article'
     'solarTable solarTable aside'
@@ -183,11 +180,14 @@ td {
 #contact-contact { grid-area: contact;}
 #contact-form { grid-area: form;}
 #contact-aside { grid-area: aside;}
+#contact-message { grid-area: contactMessage;}
 
 #contact-content {
     display: grid;
     grid-template-areas:
+    'message message message'
     'nav nav nav'
+    'contactMessage contactMessage contactMessage'
     'contact contact contact'
     'form form aside'
     'footer footer footer';
@@ -198,22 +198,282 @@ td {
     background: #ffffff;
 }
 
-#EUsolar-aside, #contact-aside, #hsw-aside {
+#contact-form fieldset {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;    
+    flex-direction: column;    
 }
 
-.nav-mobile {
+#contact-form input {
+    width: 8em;
+}
+
+#contact-form textarea {
+    resize: none;
+    width: 24em;
+}
+
+#EUsolar-aside, #contact-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#hsw-aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-bar {
+    width: 100%;
+    background: #0C4A60;
+    position: sticky;
+    top: 0;
+}
+  
+.nav-bar label, #hamburger { 
     display: none;
+    margin-left: 90%;
+}
+  
+#burger-items { 
+    display: flex; 
+}
+
+#burger-items a {
+    width: 20%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#burger-items a:hover {
+    background: #EF6C33;
+}
+
+@media only screen and (max-width: 800px) {
+
+    /*Tablet Home page*/
+    #index-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #index-main :nth-child(1) {order: 1;}
+    #index-main :nth-child(2) {order: 2;}
+    #index-main :nth-child(3) {order: 3;}
+    #index-main :nth-child(4) {order: 5;}
+    #index-main :nth-child(5) {order: 4;}
+    #index-main :nth-child(6) {order: 6;}
+
+    .home-product {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    /*Tablet how solar works grid*/
+    #hsw-content {
+        display: grid;
+        grid-template-areas:
+        'message message message'
+        'nav nav nav'
+        'articles articles articles'
+        'aside aside aside'
+        'footer footer footer';    
+    }
+
+    #hsw-articles{
+        display: grid;
+        grid-template-areas: 
+        'article1 article2'
+        'article3 article5'
+        'article6 article6';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .hsw-prodcut3, .hsw-article4 {
+        display: none;
+    }
+    
+    /*Tablet EUsolar grid*/
+    #EUsolar-content {
+        display: grid;
+        grid-template-areas:
+        'head head head'
+        'nav nav nav'
+        'article article article'
+        'solarTable solarTable solarTable'
+        'aside aside aside'
+        'footer footer footer';
+        grid-gap: 20px;
+    }
+
+    .year2012, .year2013, .EUsolar-product1 {
+        display: none;
+    }
+
+    #EUsolar-aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /*Tablet contact grid*/
+    #contact-content {
+        display: grid;
+        grid-template-areas:
+        'message message'
+        'nav nav'
+        'contactMessage contactMessage'
+        'contact contact'
+        'form aside'
+        'footer footer';
+        grid-gap: 10px;
+    }    
 }
 
 @media only screen and (max-width: 600px) {
-    .nav-mobile {
-        display: block;        
+
+    /*Burger menu*/
+    .nav-bar label {
+        display: inline-block; 
+        color: white;
+        background: #a02620;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+    
+    #burger-items a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+    }
+    
+    #burger-items { 
+        display: none; 
     }
 
-    .nav-desktop {
+    .nav-bar input:checked ~ #burger-items { 
+        display: block; 
+    }
+
+    .site-welome-message {
         display: none;
     }
+
+    /*Phone home*/
+    #index-video {
+        display: none;
+    }
+
+    /*Phone Hows solar works grid*/
+    #hsw-content {
+        display: grid;
+        grid-template-areas:
+        'nav nav'
+        'articles articles'
+        'aside aside'
+        'footer footer';    
+    }
+
+    #hsw-articles{
+        display: grid;
+        grid-template-areas: 
+        'article5'
+        'article3'
+        'article2'
+        'article1';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .hsw-article6 {
+        display: none;
+    }
+
+    /*Phone EUsolar*/
+    #EUsolar-content {
+        display: grid;
+        grid-template-areas:
+        'head head'
+        'nav nav'
+        'article article'
+        'solarTable solarTable'
+        'aside aside'
+        'footer footer';
+        grid-gap: 20px;
+    }
+
+    .year2012, .year2013, .year2014, .year2015 {
+        display: none;
+    }
+
+    #EUsolar-aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .EUsolar-product1 {
+        display: block;
+    }
+
+    /*Phone contact grid*/
+    #contact-content {
+        display: grid;
+        grid-template-areas:        
+        'message message'
+        'nav nav'
+        'contactMessage contactMessage'
+        'contact contact'
+        'form form'
+        'aside aside'
+        'footer footer';
+        grid-gap: 10px;
+    }
+    
+#hamnav {
+    width: 100%;
+    background: #0C4A60;
+  }
+  
+  #hamnav label, #hamburger { 
+      display: none;
+      margin-left: 90%;
+    }
+  
+  #hamitems { display: flex; }
+  #hamitems a {
+    width: 20%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #EF6C33;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
 }

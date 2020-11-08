@@ -4,99 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This webpage is for the NL">
+    <meta name="description" content="Purpose of this website is to advertise to solarpanels">
     <meta name="author" content="Thomas Eddyson">
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="icon" type="image/png" href="img/solar-panel.png"/>
-    <a href="index.html"><img src="img/solar-panel.png" id="logo"></a>
     <title>How solar works</title>
-    <h1>InHolland solar energy</h1>
-    <h2>Make the world a better place</h2>
 </head>
 <body>
-    <main id="index-content">
-        <section class="navigation">
-            <nav class="nav-bar-desktop">
-                <ul class="nav-bar">
-                    <li> <a href="howsolarworks.html">Howsolarworks</a></li>
-                    <li> <a href="eusolar.html">Eusolar</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
-                </ul>        
-            </nav>
-        </section>
-        <section id="index-video">
-            <video controls loop autoplay="autoPlay" muted>
-                <source src="video/Solar-Energy-Animation.mp4" type="video/mp4">
-                <source src="video/Solar-Energy-Animation.ogg" type="video/ogg">
-                Your browser does not support the video tag.            
-            </video>
-        </section>
-        <section id="index-products">
-            <article class="home-product">
-                <h2>SmartSolar MPPT</h2>
-                <p>A solar charger gathers energy from your solar panels, and stores it in your batteries. 
-                    Using the latest, fastest technology, SmartSolar maximises this energy-harvest, 
-                    driving it intelligently to achieve full charge in the shortest possible time. 
-                    SmartSolar maintains battery health, extending its life. 
-                    The SmartSolar charge controller will even recharge a severely depleted battery. 
-                    It can operate with a battery voltage as low as 0 Volts, 
-                    provided the cells are not permanently sulphated or otherwise damaged.
+  <main id="index-main">
+    <section class="site-welcome-message">
+        <a href="index.html" class="icon"><img src="img/solar-panel.png" alt="solarpanel icon" id="logo"></a>
+            <h1>InHolland solar energy</h1>
+        <h2>Make the world a better place</h2>
+    </section>
+    <nav class="nav-bar">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
 
-                    For more info click
-                    <a href="https://www.victronenergy.com/solar-charge-controllers/smartsolar-100-30-100-50">Here</a>
-                </p>
-                <img src="img/solar-mppt.png" class="product-img">            
-            </article>
-            <article class="home-product">
+        <section id="burger-items">
+            <a href="howsolarworks.html">How solar works</a>
+            <a href="eusolar.html">EU solar</a>
+            <a href="contact.html">Contact</a>
+        </section>
+    </nav>
+    <section id="index-video">
+        <video controls loop autoplay="autoPlay" muted>
+        <source src="video/Solar-Energy-Animation.mp4" type="video/mp4">
+        <source src="video/Solar-Energy-Animation.ogg" type="video/ogg">
+        Your browser does not support the video tag.            
+        </video>
+    </section>
+  <section id="index-article">
+        <article class="home-product">      
+        <p>A solar charger gathers energy from your solar panels, and stores it in your batteries. 
+            Using the latest, fastest technology, SmartSolar maximises this energy-harvest, 
+            driving it intelligently to achieve full charge in the shortest possible time. 
+            SmartSolar maintains battery health, extending its life. 
+            The SmartSolar charge controller will even recharge a severely depleted battery. 
+            It can operate with a battery voltage as low as 0 Volts, 
+            provided the cells are not permanently sulphated or otherwise damaged.
+
+            For more info click
+            <a href="https://www.victronenergy.com/solar-charge-controllers/smartsolar-100-30-100-50"><em>Here</em></a>
+        </p>
+        <figure>
+            <img src="img/solar-mppt.png" alt="SmartSolar MPPT" class="product-img">
+            <h2>SmartSolar MPPT</h2>
+        </figure>                
+        </article>
+        <article class="home-product">    
+            <p>Thanks to its integrated web interface for easy commissioning via a smartphone or
+                tablet and SMA Smart Connected service, this inverter offers true ease and comfort for PV system operators and installers.
+                Established product features and integrated software solutions will provide yield 
+                optimization throughout the system’s entire service life. 
+                Even in shading. SMA ShadeFix is a proprietary inverter software that 
+                optimizes energy yield in nearly every situation. SMA Smart Connected inverter 
+                monitoring offers enhanced safety by detecting errors at an early stage and automatically 
+                reporting them to the installer.
+                
+                For more info click
+                <a href="https://www.sma.de/en/products/solarinverters/sunny-boy-30-36-40-50-60.html"><em>Here</em></a>
+            </p>
+            <figure>
+                <img src="img/SMA-portal_s.jpg" alt="SUNNY BOY" class="product-img">
                 <h2>SUNNY BOY</h2>
-                <p>Thanks to its integrated web interface for easy commissioning via a smartphone or
-                     tablet and SMA Smart Connected service, this inverter offers true ease and comfort for PV system operators and installers.
-                    Established product features and integrated software solutions will provide yield 
-                    optimization throughout the system’s entire service life. 
-                    Even in shading. SMA ShadeFix is a proprietary inverter software that 
-                    optimizes energy yield in nearly every situation. SMA Smart Connected inverter 
-                    monitoring offers enhanced safety by detecting errors at an early stage and automatically 
-                    reporting them to the installer.
+            </figure>                  
+        </article>
+        <article class="home-product">    
+                <p>The MultiPlus, as the name suggests, is a combined inverter and charger in one elegant package. 
+                    Its many features include a true sine wave inverter, adaptive charging, hybrid PowerAssist technology, 
+                    plus multiple system integration features.
+                    The MultiPlus will prevent overload of a limited AC source, such as a generator or shore power 
+                    connection.
+                    In the event of a grid failure, or when shore or generator power is disconnected, the inverter 
+                    within the Multi is automatically activated and takes over the supply to the connected loads.                      
                     
                     For more info click
-                    <a href="https://www.sma.de/en/products/solarinverters/sunny-boy-30-36-40-50-60.html">Here</a>
-                    </p>
-                    <img src="img/SMA-portal_s.jpg" class="product-img">                
-            </article>
-            <article class="home-product">
-                <h2>MultiPlus</h2>
-                    <p>The MultiPlus, as the name suggests, is a combined inverter and charger in one elegant package. 
-                        Its many features include a true sine wave inverter, adaptive charging, hybrid PowerAssist technology, 
-                        plus multiple system integration features.
-                        The MultiPlus will prevent overload of a limited AC source, such as a generator or shore power 
-                        connection.
-                        In the event of a grid failure, or when shore or generator power is disconnected, the inverter 
-                        within the Multi is automatically activated and takes over the supply to the connected loads.                      
-                        
-                        For more info click
-                        <a href="https://www.victronenergy.com/inverters-chargers/multiplus-12v-24v-48v-800va-3kva">Here</a>
-                    </p>
-                    <img src="img/multiplus.png " class="product-img">                    
-            </article>
-        </section>        
-        <section id="index-aside">
-            <aside>
-                <h2>5 reasons to use solar power</h2>
-                <ol>
-                    <li>Good for the enviroment</li>
-                    <li>Saves money</li>
-                    <li>Makes money</li>
-                    <li>Increase property value</li>
-                    <li>Sustainable and reneable</li>
-                </ol>
-            </aside>
-        </section>
-        <section id="index-footer">
-            <footer class="footer"><h5>© 2020 Thomas Eddyson</h5></footer>
-        </section>
-    </main>    
-    <section id="cookie">                
-        <a href="">Cookie Statement</a>
-    </section>
+                    <a href="https://www.victronenergy.com/inverters-chargers/multiplus-12v-24v-48v-800va-3kva"><em>Here</em></a>
+                </p>
+                <figure>
+                    <img src="img/multiplus.png" alt="MultiPlus" class="product-img">
+                    <h2>MultiPlus</h2>
+                </figure>
+        </article>
+  </section>
+  <aside id="index-aside">
+    <h2>5 reasons to use solar power</h2>
+    <ol>
+        <li>Good for the enviroment</li>
+        <li>Saves money</li>
+        <li>Makes money</li>
+        <li>Increase property value</li>
+        <li>Sustainable and reneable</li>
+    </ol>
+  </aside>  
+  <footer class="Footer"><h5>© 2020 Thomas Eddyson</h5></footer>
+  </main>
 </body>
 </html>
