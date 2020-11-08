@@ -439,12 +439,12 @@ td {
         grid-gap: 10px;
     }
     
-#hamnav {
+#nav-bar {
     width: 100%;
     background: #0C4A60;
   }
   
-  #hamnav label, #hamburger { 
+  #nav-bar label, #hamburger { 
       display: none;
       margin-left: 90%;
     }
@@ -458,7 +458,7 @@ td {
     text-align: center;
   }
   
-  #hamnav label { 
+  #nav-bar label { 
     display: inline-block; 
     color: white;
     background: #EF6C33;
@@ -475,5 +475,5 @@ td {
   }
 
   #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
+  #nav-bar input:checked ~ #hamitems { display: block; }
 }
